@@ -10,7 +10,7 @@ async function req(method, path, body) {
   const t = getToken();
   const res = await fetch(BASE + path, {
     method,
-    headers: { 'Content-Type': 'application/json', ...(t && { Authorization: `Bearer ${t}` }) },
+    headers: { 'Content-Type': 'application/json', ...(t && { Authorization: `Bearer ${t}` }), 'ngrok-skip-browser-warning': 'true' },
     body: body ? JSON.stringify(body) : undefined,
   });
   const json = await res.json().catch(() => ({}));
