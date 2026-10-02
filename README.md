@@ -5,6 +5,4 @@ npm install
 cp .env.example .env     # VITE_API_URL must point at the API (default http://localhost:4000/api)
 npm run dev              # http://localhost:3000
 ```
-Start the API first (`npm run dev` in social-publisher-server). Its `.env` needs `CORS_ORIGINS=*` (or `http://localhost:3000`) and `PUBLIC_APP_URL=http://localhost:3000`.
-Demo logins after `npm run db:seed`: `demo_alice` / `Password123`, or your admin account.
-Rename the app in `src/ui.jsx` (`APP_NAME`). Production build: `npm run build` (serve `dist/` with SPA fallback to index.html).
+Start the API first (`npm run dev` in social-publisher-server). Its `.env` needs `CORS_ORIGINS=*` (or `http://localhost:3000`) and `PUBLIC_APP_URL=http://localhost:3000`. Production build: `npm run build` (serve `dist/` with SPA fallback to index.html).
